@@ -28,5 +28,6 @@ server_scripts {
 }
 
 dependencies {
-    'pma-voice'
+    'pma-voice',
+    'qb-core'
 }
