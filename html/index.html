@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Radio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="radio-container" id="radio" style="display: none;">
+        <div class="radio-body">
+            <div class="screen">
+                <div class="status-bar">
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-battery-full"></i>
+                </div>
+                <div class="frequency-display">
+                    <span id="current-freq">OFF</span>
+                    <span class="mhz">MHz</span>
+                </div>
+                <div class="channel-info">
+                    <span id="status-text">Disconnected</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="dial-container">
+                    <div class="dial">
+                        <div class="dial-marker"></div>
+                    </div>
+                </div>
+                
+                <div class="buttons-grid">
+                    <button class="btn btn-preset" onclick="setPreset(1)">1</button>
+                    <button class="btn btn-preset" onclick="setPreset(2)">2</button>
+                    <button class="btn btn-preset" onclick="setPreset(3)">3</button>
+                    <button class="btn btn-power" id="power-btn"><i class="fas fa-power-off"></i></button>
+                </div>
+
+                <div class="input-area">
+                    <input type="number" id="freq-input" placeholder="000.0" step="0.1">
+                    <button id="join-btn">CONNECT</button>
+                </div>
+
+                <div class="volume-controls">
+                    <i class="fas fa-volume-down"></i>
+                    <input type="range" id="volume-slider" min="0" max="100" value="50">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
